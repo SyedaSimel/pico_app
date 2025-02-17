@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:flutter_svg/svg.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
 
-  BottomNavBar({required this.selectedIndex, required this.onItemTapped});
+  const BottomNavBar({super.key, required this.selectedIndex, required this.onItemTapped});
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +42,7 @@ class BottomNavBar extends StatelessWidget {
             ),
           ),
         ),
+        
         Positioned(
           bottom: 45,
           left: MediaQuery.of(context).size.width / 2 - 30,
@@ -73,8 +73,7 @@ class BottomNavBar extends StatelessWidget {
                     "assets/icons/home_tab.svg",
                     width: 30,
                     height: 30,
-                    colorFilter:
-                        ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                    colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
                   ),
                 ),
               ),
