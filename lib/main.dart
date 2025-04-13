@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Bottom Nav Demo',
+      title: 'Pico App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

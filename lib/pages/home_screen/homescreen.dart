@@ -32,18 +32,21 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Colors.grey[100],
       body: SafeArea(
         child: Stack(
-          fit: StackFit.expand,
           children: [
+            // 👉 Let it expand fully without clipping bottom
             Positioned.fill(
-              bottom: 80,
               child: _screens[_selectedIndex],
             ),
-            
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: BottomNavBar(
-                selectedIndex: _selectedIndex,
-                onItemTapped: _onItemTapped,
+
+            // 👉 This keeps your bottom nav floating
+            IgnorePointer(
+              ignoring: false,
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: BottomNavBar(
+                  selectedIndex: _selectedIndex,
+                  onItemTapped: _onItemTapped,
+                ),
               ),
             ),
           ],
