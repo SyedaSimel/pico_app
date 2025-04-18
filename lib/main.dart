@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pica_app_project/pages/home_screen/homescreen.dart';
+import 'package:pica_app_project/pages/home_screen/mainscreen.dart';
 
 void main() {
   runApp(MyApp());
